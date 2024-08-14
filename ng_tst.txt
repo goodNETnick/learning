@@ -11,7 +11,7 @@ map $request_uri $allowed {
 server {
     listen 443 ssl;
     include snippets/self-signed.conf;
-    include snippets/self-params.conf;
+    include snippets/ssl-params.conf;
 
     location / {
         if ($allowed = 1) {
