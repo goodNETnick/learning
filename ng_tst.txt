@@ -1,5 +1,5 @@
 map $request_uri $allowed {
-    default          0;
+    default          403;
     /sitezr/hs/BonusInfo/PostCardRegistration 1;
     /sitezr/hs/BonusInfo/PostBonusSumm 1;
     /sitezr/hs/BonusInfo/PostCarRegistration 1;
@@ -14,9 +14,11 @@ server {
     include snippets/self-params.conf;
 
     location / {
-        if ($allowed) {
+        if ($allowed = 1) {
             proxy_pass https://10.10.1.39;
         }
-        return 403;  # Forbidden
+        if ($allowed = 403) {
+            return 403;  # Forbidden
+        }
     }
 }
