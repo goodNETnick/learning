@@ -6,6 +6,7 @@ map $request_uri $allowed {
     ~^/sitezr/hs/BonusInfo/CalculateDiscounts/?.* 1;
     ~^/sitezr/hs/BonusInfo/PostAddUpdOrder/?.* 1;
     ~^/sitezr/hs/BonusInfo/PostGetPriceMetal/?.* 1;
+    ~^/sitezr/hs/BonusInfo/PostGiftCardSumm/?.* 1;
 }
 
 server {
