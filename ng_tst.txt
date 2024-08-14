@@ -1,11 +1,11 @@
 map $request_uri $allowed {
     default          403;
-    /sitezr/hs/BonusInfo/PostCardRegistration 1;
-    /sitezr/hs/BonusInfo/PostBonusSumm 1;
-    /sitezr/hs/BonusInfo/PostCarRegistration 1;
-    /sitezr/hs/BonusInfo/CalculateDiscounts 1;
-    /sitezr/hs/BonusInfo/PostAddUpdOrder 1;
-    /sitezr/hs/BonusInfo/PostGetPriceMetal 1;
+    ~^/sitezr/hs/BonusInfo/PostCardRegistration/?.* 1;
+    ~^/sitezr/hs/BonusInfo/PostBonusSumm/?.* 1;
+    ~^/sitezr/hs/BonusInfo/PostCarRegistration/?.* 1;
+    ~^/sitezr/hs/BonusInfo/CalculateDiscounts/?.* 1;
+    ~^/sitezr/hs/BonusInfo/PostAddUpdOrder/?.* 1;
+    ~^/sitezr/hs/BonusInfo/PostGetPriceMetal/?.* 1;
 }
 
 server {
