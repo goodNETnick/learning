@@ -6,12 +6,21 @@ map $request_uri $allowed {
     ~^/sitezr/hs/BonusInfo/PostAddUpdOrder/?.* 1;
     ~^/sitezr/hs/BonusInfo/PostGetPriceMetal/?.* 1;
     ~^/sitezr/hs/BonusInfo/PostGiftCardSumm/?.* 1;
+    ~^/sitezr/hs/BonusInfo/PostAddGiftCard/?.* 1;
     ~^/sitezrCopy/hs/BonusInfo/PostBonusSumm/?.* 1;
     ~^/sitezrCopy/hs/BonusInfo/PostCardRegistration/?.* 1;
     ~^/sitezrCopy/hs/BonusInfo/CalculateDiscounts/?.* 1;
     ~^/sitezrCopy/hs/BonusInfo/PostAddUpdOrder/?.* 1;
     ~^/sitezrCopy/hs/BonusInfo/PostGetPriceMetal/?.* 1;
     ~^/sitezrCopy/hs/BonusInfo/PostGiftCardSumm/?.* 1;
+    ~^/sitezrCopy/hs/BonusInfo/PostAddGiftCard/?.* 1;
+    ~^/sitelmCopyLK/hs/BonusInfo/PostBonusSumm/?.* 1;
+    ~^/sitelmCopyLK/hs/BonusInfo/PostCardRegistration/?.* 1;
+    ~^/sitelmCopyLK/hs/BonusInfo/CalculateDiscounts/?.* 1;
+    ~^/sitelmCopyLK/hs/BonusInfo/PostAddUpdOrder/?.* 1;
+    ~^/sitelmCopyLK/hs/BonusInfo/PostGetPriceMetal/?.* 1;
+    ~^/sitelmCopyLK/hs/BonusInfo/PostGiftCardSumm/?.* 1;
+    ~^/sitelmCopyLK/hs/BonusInfo/PostAddGiftCard/?.* 1;
     ~^/sitelm/hs/ZRInfo/PostGetPriceMetal/?.* 38;
     ~^/sitelm/hs/ZRInfo/PostGetPercentages/?.* 38;
 }
