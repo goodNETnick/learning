@@ -14,15 +14,18 @@ map $request_uri $allowed {
     ~^/sitezrCopy/hs/BonusInfo/PostGetPriceMetal/?.* 1;
     ~^/sitezrCopy/hs/BonusInfo/PostGiftCardSumm/?.* 1;
     ~^/sitezrCopy/hs/BonusInfo/PostAddGiftCard/?.* 1;
-    ~^/sitelmCopyLK/hs/BonusInfo/PostBonusSumm/?.* 1;
-    ~^/sitelmCopyLK/hs/BonusInfo/PostCardRegistration/?.* 1;
-    ~^/sitelmCopyLK/hs/BonusInfo/CalculateDiscounts/?.* 1;
-    ~^/sitelmCopyLK/hs/BonusInfo/PostAddUpdOrder/?.* 1;
-    ~^/sitelmCopyLK/hs/BonusInfo/PostGetPriceMetal/?.* 1;
-    ~^/sitelmCopyLK/hs/BonusInfo/PostGiftCardSumm/?.* 1;
-    ~^/sitelmCopyLK/hs/BonusInfo/PostAddGiftCard/?.* 1;
     ~^/sitelm/hs/ZRInfo/PostGetPriceMetal/?.* 38;
     ~^/sitelm/hs/ZRInfo/PostGetPercentages/?.* 38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/GetTest/?.* 38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostInfoZalogodatel/?.* 38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostOplata/?.* 38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostOplataFinish/?.* 38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostSendSMS/?.* 38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostUserInfo/?.* 38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostDeletePayments/?.* 38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/GetPrintedForm/?.* 38;
+    ~^/sitelmCopyLK/hs/ZRInfo/PostGetPriceMetal/?.* 38;
+    ~^/sitelmCopyLK/hs/ZRInfo/PostGetPercentages/?.* 38;
 }
 
 server {
