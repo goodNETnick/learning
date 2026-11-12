@@ -1,7 +1,7 @@
 map $request_uri $backend_upstream {
     default                                                         "forbidden";
 
-    # Backend 10.10.1.39 -FIG
+    # Backend 10.10.1.39 -ZR
     ~^/sitezr/hs/BonusInfo/PostBonusSumm/?.*                       https://10.10.1.39;
     ~^/sitezr/hs/BonusInfo/PostCardRegistration/?.*                https://10.10.1.39;
     ~^/sitezr/hs/BonusInfo/CalculateDiscounts/?.*                  https://10.10.1.39;
@@ -9,6 +9,17 @@ map $request_uri $backend_upstream {
     ~^/sitezr/hs/BonusInfo/PostGetPriceMetal/?.*                   https://10.10.1.39;
     ~^/sitezr/hs/BonusInfo/PostGiftCardSumm/?.*                    https://10.10.1.39;
     ~^/sitezr/hs/BonusInfo/PostAddGiftCard/?.*                     https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostBonusSumm/?.*                   https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostCardRegistration/?.*            https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/CalculateDiscounts/?.*              https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostAddUpdOrder/?.*                 https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostGetPriceMetal/?.*               https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostGiftCardSumm/?.*                https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostAddGiftCard/?.*                 https://10.10.1.39;
+
+    # Backend 10.10.1.38 -LM
+    ~^/sitelm/hs/ZRInfo/PostGetPriceMetal/?.*                      https://10.10.1.38;
+    ~^/sitelm/hs/ZRInfo/PostGetPercentages/?.*                     https://10.10.1.38;
     ~^/sitelm/hs/LK_Zalogodatel/GetTest/?.*                        https://10.10.1.39;
     ~^/sitelm/hs/LK_Zalogodatel/PostInfoZalogodatel/?.*            https://10.10.1.39;
     ~^/sitelm/hs/LK_Zalogodatel/PostOplata/?.*                     https://10.10.1.39;
@@ -20,17 +31,6 @@ map $request_uri $backend_upstream {
     ~^/sitelm/hs/LK_Zalogodatel/PostViplata/?.*                    https://10.10.1.39;
     ~^/sitelm/hs/LK_Zalogodatel/PostViplataFinish/?.*              https://10.10.1.39;
     ~^/sitelm/hs/LK_Zalogodatel/PostViplataStatus/?.*              https://10.10.1.39;
-    ~^/sitezrCopy/hs/BonusInfo/PostBonusSumm/?.*                   https://10.10.1.39;
-    ~^/sitezrCopy/hs/BonusInfo/PostCardRegistration/?.*            https://10.10.1.39;
-    ~^/sitezrCopy/hs/BonusInfo/CalculateDiscounts/?.*              https://10.10.1.39;
-    ~^/sitezrCopy/hs/BonusInfo/PostAddUpdOrder/?.*                 https://10.10.1.39;
-    ~^/sitezrCopy/hs/BonusInfo/PostGetPriceMetal/?.*               https://10.10.1.39;
-    ~^/sitezrCopy/hs/BonusInfo/PostGiftCardSumm/?.*                https://10.10.1.39;
-    ~^/sitezrCopy/hs/BonusInfo/PostAddGiftCard/?.*                 https://10.10.1.39;
-
-    # Backend 10.10.1.38 -CP
-    ~^/sitelm/hs/ZRInfo/PostGetPriceMetal/?.*                      https://10.10.1.38;
-    ~^/sitelm/hs/ZRInfo/PostGetPercentages/?.*                     https://10.10.1.38;
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/GetTest/?.*                  https://10.10.1.38;
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostInfoZalogodatel/?.*      https://10.10.1.38;
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostOplata/?.*               https://10.10.1.38;
