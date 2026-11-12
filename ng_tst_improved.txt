@@ -20,17 +20,17 @@ map $request_uri $backend_upstream {
     # Backend 10.10.1.38 -LM
     ~^/sitelm/hs/ZRInfo/PostGetPriceMetal/?.*                      https://10.10.1.38;
     ~^/sitelm/hs/ZRInfo/PostGetPercentages/?.*                     https://10.10.1.38;
-    ~^/sitelm/hs/LK_Zalogodatel/GetTest/?.*                        https://10.10.1.39;
-    ~^/sitelm/hs/LK_Zalogodatel/PostInfoZalogodatel/?.*            https://10.10.1.39;
-    ~^/sitelm/hs/LK_Zalogodatel/PostOplata/?.*                     https://10.10.1.39;
-    ~^/sitelm/hs/LK_Zalogodatel/PostOplataFinish/?.*               https://10.10.1.39;
-    ~^/sitelm/hs/LK_Zalogodatel/PostSendSMS/?.*                    https://10.10.1.39;
-    ~^/sitelm/hs/LK_Zalogodatel/PostUserInfo/?.*                   https://10.10.1.39;
-    ~^/sitelm/hs/LK_Zalogodatel/PostDeletePayments/?.*             https://10.10.1.39;
-    ~^/sitelm/hs/LK_Zalogodatel/GetPrintedForm/?.*                 https://10.10.1.39;
-    ~^/sitelm/hs/LK_Zalogodatel/PostViplata/?.*                    https://10.10.1.39;
-    ~^/sitelm/hs/LK_Zalogodatel/PostViplataFinish/?.*              https://10.10.1.39;
-    ~^/sitelm/hs/LK_Zalogodatel/PostViplataStatus/?.*              https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/GetTest/?.*                        https://10.10.1.38;
+    ~^/sitelm/hs/LK_Zalogodatel/PostInfoZalogodatel/?.*            https://10.10.1.38;
+    ~^/sitelm/hs/LK_Zalogodatel/PostOplata/?.*                     https://10.10.1.38;
+    ~^/sitelm/hs/LK_Zalogodatel/PostOplataFinish/?.*               https://10.10.1.38;
+    ~^/sitelm/hs/LK_Zalogodatel/PostSendSMS/?.*                    https://10.10.1.38;
+    ~^/sitelm/hs/LK_Zalogodatel/PostUserInfo/?.*                   https://10.10.1.38;
+    ~^/sitelm/hs/LK_Zalogodatel/PostDeletePayments/?.*             https://10.10.1.38;
+    ~^/sitelm/hs/LK_Zalogodatel/GetPrintedForm/?.*                 https://10.10.1.38;
+    ~^/sitelm/hs/LK_Zalogodatel/PostViplata/?.*                    https://10.10.1.38;
+    ~^/sitelm/hs/LK_Zalogodatel/PostViplataFinish/?.*              https://10.10.1.38;
+    ~^/sitelm/hs/LK_Zalogodatel/PostViplataStatus/?.*              https://10.10.1.38;
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/GetTest/?.*                  https://10.10.1.38;
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostInfoZalogodatel/?.*      https://10.10.1.38;
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostOplata/?.*               https://10.10.1.38;
