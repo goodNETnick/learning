@@ -17,6 +17,9 @@ map $request_uri $backend_upstream {
     ~^/sitelm/hs/LK_Zalogodatel/PostUserInfo/?.*                   https://10.10.1.39;
     ~^/sitelm/hs/LK_Zalogodatel/PostDeletePayments/?.*             https://10.10.1.39;
     ~^/sitelm/hs/LK_Zalogodatel/GetPrintedForm/?.*                 https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/PostViplata/?.*                    https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/PostViplataFinish/?.*              https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/PostViplataStatus/?.*              https://10.10.1.39;
     ~^/sitezrCopy/hs/BonusInfo/PostBonusSumm/?.*                   https://10.10.1.39;
     ~^/sitezrCopy/hs/BonusInfo/PostCardRegistration/?.*            https://10.10.1.39;
     ~^/sitezrCopy/hs/BonusInfo/CalculateDiscounts/?.*              https://10.10.1.39;
@@ -36,6 +39,9 @@ map $request_uri $backend_upstream {
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostUserInfo/?.*             https://10.10.1.38;
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostDeletePayments/?.*       https://10.10.1.38;
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/GetPrintedForm/?.*           https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostViplata/?.*              https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostViplataFinish/?.*        https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostViplataStatus/?.*        https://10.10.1.38;
     ~^/sitelmCopyLK/hs/ZRInfo/PostGetPriceMetal/?.*                https://10.10.1.38;
     ~^/sitelmCopyLK/hs/ZRInfo/PostGetPercentages/?.*               https://10.10.1.38;
 
