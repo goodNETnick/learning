@@ -1,7 +1,7 @@
 map $request_uri $backend_upstream {
     default                                                         "forbidden";
 
-    # Backend 10.10.1.39
+    # Backend 10.10.1.39 -FIG
     ~^/sitezr/hs/BonusInfo/PostBonusSumm/?.*                       https://10.10.1.39;
     ~^/sitezr/hs/BonusInfo/PostCardRegistration/?.*                https://10.10.1.39;
     ~^/sitezr/hs/BonusInfo/CalculateDiscounts/?.*                  https://10.10.1.39;
@@ -9,6 +9,14 @@ map $request_uri $backend_upstream {
     ~^/sitezr/hs/BonusInfo/PostGetPriceMetal/?.*                   https://10.10.1.39;
     ~^/sitezr/hs/BonusInfo/PostGiftCardSumm/?.*                    https://10.10.1.39;
     ~^/sitezr/hs/BonusInfo/PostAddGiftCard/?.*                     https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/GetTest/?.*                        https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/PostInfoZalogodatel/?.*            https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/PostOplata/?.*                     https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/PostOplataFinish/?.*               https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/PostSendSMS/?.*                    https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/PostUserInfo/?.*                   https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/PostDeletePayments/?.*             https://10.10.1.39;
+    ~^/sitelm/hs/LK_Zalogodatel/GetPrintedForm/?.*                 https://10.10.1.39;
     ~^/sitezrCopy/hs/BonusInfo/PostBonusSumm/?.*                   https://10.10.1.39;
     ~^/sitezrCopy/hs/BonusInfo/PostCardRegistration/?.*            https://10.10.1.39;
     ~^/sitezrCopy/hs/BonusInfo/CalculateDiscounts/?.*              https://10.10.1.39;
@@ -17,7 +25,7 @@ map $request_uri $backend_upstream {
     ~^/sitezrCopy/hs/BonusInfo/PostGiftCardSumm/?.*                https://10.10.1.39;
     ~^/sitezrCopy/hs/BonusInfo/PostAddGiftCard/?.*                 https://10.10.1.39;
 
-    # Backend 10.10.1.38
+    # Backend 10.10.1.38 -CP
     ~^/sitelm/hs/ZRInfo/PostGetPriceMetal/?.*                      https://10.10.1.38;
     ~^/sitelm/hs/ZRInfo/PostGetPercentages/?.*                     https://10.10.1.38;
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/GetTest/?.*                  https://10.10.1.38;
@@ -30,6 +38,7 @@ map $request_uri $backend_upstream {
     ~^/sitelmCopyLK/hs/LK_Zalogodatel/GetPrintedForm/?.*           https://10.10.1.38;
     ~^/sitelmCopyLK/hs/ZRInfo/PostGetPriceMetal/?.*                https://10.10.1.38;
     ~^/sitelmCopyLK/hs/ZRInfo/PostGetPercentages/?.*               https://10.10.1.38;
+
 }
 
 server {
