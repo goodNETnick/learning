@@ -1,0 +1,51 @@
+map $request_uri $backend_upstream {
+    default                                                         "forbidden";
+
+    # Backend 10.10.1.39
+    ~^/sitezr/hs/BonusInfo/PostBonusSumm/?.*                       https://10.10.1.39;
+    ~^/sitezr/hs/BonusInfo/PostCardRegistration/?.*                https://10.10.1.39;
+    ~^/sitezr/hs/BonusInfo/CalculateDiscounts/?.*                  https://10.10.1.39;
+    ~^/sitezr/hs/BonusInfo/PostAddUpdOrder/?.*                     https://10.10.1.39;
+    ~^/sitezr/hs/BonusInfo/PostGetPriceMetal/?.*                   https://10.10.1.39;
+    ~^/sitezr/hs/BonusInfo/PostGiftCardSumm/?.*                    https://10.10.1.39;
+    ~^/sitezr/hs/BonusInfo/PostAddGiftCard/?.*                     https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostBonusSumm/?.*                   https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostCardRegistration/?.*            https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/CalculateDiscounts/?.*              https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostAddUpdOrder/?.*                 https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostGetPriceMetal/?.*               https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostGiftCardSumm/?.*                https://10.10.1.39;
+    ~^/sitezrCopy/hs/BonusInfo/PostAddGiftCard/?.*                 https://10.10.1.39;
+
+    # Backend 10.10.1.38
+    ~^/sitelm/hs/ZRInfo/PostGetPriceMetal/?.*                      https://10.10.1.38;
+    ~^/sitelm/hs/ZRInfo/PostGetPercentages/?.*                     https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/GetTest/?.*                  https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostInfoZalogodatel/?.*      https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostOplata/?.*               https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostOplataFinish/?.*         https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostSendSMS/?.*              https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostUserInfo/?.*             https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/PostDeletePayments/?.*       https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/LK_Zalogodatel/GetPrintedForm/?.*           https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/ZRInfo/PostGetPriceMetal/?.*                https://10.10.1.38;
+    ~^/sitelmCopyLK/hs/ZRInfo/PostGetPercentages/?.*               https://10.10.1.38;
+}
+
+server {
+    listen 443 ssl;
+    include snippets/self-signed.conf;
+    include snippets/ssl-params.conf;
+
+    location / {
+        if ($backend_upstream = "forbidden") {
+            return 403;
+        }
+
+        proxy_pass $backend_upstream;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
